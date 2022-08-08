@@ -1,4 +1,5 @@
 require('dotenv').config();
+console.log('MongoURL', process.env.MONGO_URL)
 const { pd } = require('./src/script');
 const { createProducts } = require('./src/lib/fakerProducts');
 const FirebaseContainer = require('./src/lib/FirebaseContainer');
