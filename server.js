@@ -22,7 +22,7 @@ const MongoStore = require('connect-mongo');
 const httpServer = new HttpServer(app);
 const io = new IOServer(httpServer);
 
-const options = { alias: { p: "PORT", mode: "MODE"}, default: { PORT: 8080, MODE: "FORK" } };
+const options = { alias: { p: "PORT", mode: "MODE"}, default: { PORT: process.env.PORT || 8080, MODE: "FORK" } };
 const { PORT, MODE } = parseArgs(process.argv.slice(2), options);
 
 if(MODE === 'CLUSTER' && cluster.isPrimary) {
