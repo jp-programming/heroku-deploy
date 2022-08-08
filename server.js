@@ -1,4 +1,4 @@
-require('dotenv').config();
+//require('dotenv').config();
 console.log('MongoURL', process.env.MONGO_URL)
 const { pd } = require('./src/script');
 const { createProducts } = require('./src/lib/fakerProducts');
